@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+</head>
+<body style="background-color: #f2f2f2">
+
+
+<div style="height: 70px;background-color:#ff6964;top: 12px;">
+	<tr></tr>
+</div>
+
+
+<div style="position: absolute;top: 4%;left: 55%;font-size: 20px;">
+	<table>
+		<td><a  style="text-decoration: none;color: white;" href="login">登录</a></td>
+		<td><a 	style="text-decoration: none;color: white;" href="register">注册</a></td>
+	</table>
+</div>
+
+<div>
+	<table style="position: absolute;top: 4%;left: 35%;">
+		<tr>
+			<td><input type="seach"  value="" placeholder="请输入content" name=""></td>
+			<td><input type="button" value="搜索" name=""></td>
+		</tr>
+	</table>
+</div>
+
+
+<div style="background: white;height:auto;width: 800px;position: absolute;top:15%;left:12%;">
+	<table >
+		{{ range.}}
+		<tr>
+		<td>{{ .Id }}</td>
+		<td style="  width: 600px;border-bottom:0.1px solid rgb(189, 187, 187);border-right:0px solid #999;padding:10px 30px;"><a style="text-decoration: none;color: black;" href = "/indexcontent/{{ .Id }}">{{ .Title }}</a></td>
+		<td></td>
+		<td style="  width: 600px;border-bottom:0.1px solid rgb(189, 187, 187);border-right:0px solid #999;padding:10px 30px;"><a style="text-decoration: none;color: black;" href = "/indexcontent/{{ .Id }}">{{ .Content }}</a></td>
+		<!-- <td style="width: 100px;border-bottom:0.1px solid rgb(189, 187, 187);border-right:0px solid #999;padding:10px 30px;"><a style="text-decoration: none;color: black;" href="/content?id={{ .Id }}">查看详情</a></td> -->
+		</tr>
+		
+		{{ end }}
+	
+
+	</table>
+</div>
+
+
+
+</body>
+</html>
